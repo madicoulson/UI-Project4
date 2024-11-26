@@ -1,12 +1,11 @@
 <script>
 	export let type = 'default';
-	export let size = 'default';
 </script>
 
 <span
 	class="text"
 	class:default={type === 'default'}
-    class:bold={size === 'large'}
+    class:bold={type === 'bold'}
 >
 	<slot></slot>
 </span>
@@ -14,7 +13,8 @@
 <style>
 	.text {
 		color: black;
-		font-size: 16px;
+		font-size: 24px;
+		font-family: 'inter', sans-serif;
 	}
 
     .bold {
