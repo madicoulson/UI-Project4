@@ -16,6 +16,7 @@
 		margin: 0;
 		color: black;
 		font-weight: bold;
+        font-family: Tahoma;
 	}
 
 	.h1 {
@@ -24,9 +25,10 @@
 
 	.h2 {
 		font-size: 200%;
+        font-style: italic;
 	}
 
 	.subheader {
-		font-size: 120%;
+		font-size: 24px;
 	}
 </style>
