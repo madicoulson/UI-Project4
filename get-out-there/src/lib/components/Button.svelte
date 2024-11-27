@@ -25,9 +25,9 @@
         style="top: {y}px; left: {x}px; width: {size}px; height: {size}px;"
       ></span>
     {/each}
-  </button>
+</button>
   
-  <style>
+<style>
     .button {
       position: relative;
       overflow: hidden;
@@ -62,6 +62,4 @@
         opacity: 0;
       }
     }
-  </style>
-
-  
+</style>
