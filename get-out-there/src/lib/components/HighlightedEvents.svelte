@@ -13,19 +13,25 @@
         <figure>
             <img src={zoo} alt="Zoo Lights"/>
             <figcaption>
-                <Text type="small">Cincinnati Zoo Lights</Text>
+                <Text type="small-bold">Cincinnati Zoo Lights</Text>
+                <Text type="small">November 24, 2024 - January 5, 2025</Text>
+                <Text type="small">804 people attending, 367 interested</Text>
             </figcaption>
         </figure>
         <figure>
-            <img src={findlay} alt="Findley Market"/>
+            <img src={findlay} alt="Findlay Market"/>
             <figcaption>
-                <Text type="small">Findley Market in the Winter</Text>
+                <Text type="small-bold">Findlay Market in the Winter</Text>
+                <Text type="small">November 1, 2024 - February 28, 2025</Text>
+                <Text type="small">789 people attending, 590 interested</Text>
             </figcaption>
         </figure>
         <figure>
             <img src={cyclones} alt="Cincinnati Cyclones"/>
             <figcaption>
-                <Text type="small">Cincinnati Cyclones Hockey Game</Text>
+                <Text type="small-bold">Cincinnati Cyclones Hockey Game</Text>
+                <Text type="small">November 1, 2024 - February 28, 2025</Text>
+                <Text type="small">789 people attending, 590 interested</Text>
             </figcaption>
         </figure>   
     </div>
@@ -52,9 +58,10 @@
     figcaption {
         background-color: #A98E92;
         color: black;
-        font-style: italic;
         padding: 2px;
         text-align: center;
+        display:flex;
+        flex-direction: column;
     }
     figure:hover {
         transform: scale(1.05);

@@ -7,6 +7,7 @@
 	class:default={type === 'default'}
     class:bold={type === 'bold'}
 	class:small={type === 'small'}
+	class:smallbold={type === 'small-bold'}
 >
 	<slot></slot>
 </span>
@@ -23,5 +24,9 @@
     }
 	.small {
 		font-size: 18px;
+	}
+	.smallbold {
+		font-size: 18px;
+		font-weight: bold;
 	}
 </style>

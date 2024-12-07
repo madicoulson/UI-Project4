@@ -6,6 +6,18 @@
     import CheckOutMore from "$lib/components/CheckOutMore.svelte";
 </script>
 
-<HeaderCard></HeaderCard>
-<HighlightedEvents></HighlightedEvents>
-<CheckOutMore></CheckOutMore>
+<div class="component">
+    <HeaderCard></HeaderCard>
+    <HighlightedEvents></HighlightedEvents>
+    <hr class="solid">
+    <CheckOutMore></CheckOutMore>
+</div>
+
+<style>
+    hr.solid {
+        border-top: 3px solid #A98E92;
+    }
+    .component {
+        background-color: #FAF9F6;
+    }
+</style>
