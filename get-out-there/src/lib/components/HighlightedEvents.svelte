@@ -1,0 +1,64 @@
+<script>
+    import Text from '$lib/components/Text.svelte';
+    import Header from '$lib/components/Header.svelte';
+    import Button from '$lib/components/Button.svelte';
+    import zoo from '$lib/components/img/zoo_lights.jpg'
+    import findlay from '$lib/components/img/findlay_market.jpeg';
+    import cyclones from '$lib/components/img/cyclones.jpg'
+</script>
+
+<div class="box">
+    <Header type="subheader">Highlighted Events</Header>
+    <div class="row">
+        <figure>
+            <img src={zoo} alt="Zoo Lights"/>
+            <figcaption>
+                <Text type="small">Cincinnati Zoo Lights</Text>
+            </figcaption>
+        </figure>
+        <figure>
+            <img src={findlay} alt="Findley Market"/>
+            <figcaption>
+                <Text type="small">Findley Market in the Winter</Text>
+            </figcaption>
+        </figure>
+        <figure>
+            <img src={cyclones} alt="Cincinnati Cyclones"/>
+            <figcaption>
+                <Text type="small">Cincinnati Cyclones Hockey Game</Text>
+            </figcaption>
+        </figure>   
+    </div>
+</div>
+
+<style>
+    .box{
+        background-color: #FAF9F6;
+        padding: 20px;
+        display:flex;
+        flex-direction: column;
+    }
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        justify-content: space-between;
+    }
+    img {
+        width: 450px;
+        height: 300px;
+        padding-top: 20px;
+    }
+    figcaption {
+        background-color: #A98E92;
+        color: black;
+        font-style: italic;
+        padding: 2px;
+        text-align: center;
+    }
+    figure:hover {
+        transform: scale(1.05);
+        filter: brightness(1.2);
+        cursor: pointer;
+    }
+</style>
