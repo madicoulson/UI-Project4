@@ -58,7 +58,7 @@
         </figure>
         <figure on:mouseenter={toggleFindlayMarketInfo} on:mouseleave={toggleFindlayMarketInfo}>
             <div class="middle">
-                <Button>
+                <Button on:click={()=>createRoute('/findlay-market')}>
                     <Text type="small">Click Here to Learn More!</Text>
                 </Button>
             </div>
@@ -71,7 +71,7 @@
         </figure>
         <figure on:mouseenter={toggleCyclonesInfo} on:mouseleave={toggleCyclonesInfo}>
             <div class="middle">
-                <Button>
+                <Button on:click={()=>createRoute('/cyclones')}>
                     <Text type="small">Click Here to Learn More!</Text>
                 </Button>
             </div>

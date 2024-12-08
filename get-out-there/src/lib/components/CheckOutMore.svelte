@@ -96,7 +96,7 @@
         <div class="row">
             <figure>
                 <div class="middle">
-                    <Button  on:click={()=>createRoute('/zoo-lights')}>
+                    <Button on:click={()=>createRoute('/zoo-lights')}>
                         <Text type="small">Click Here to Learn More!</Text>
                     </Button>
                 </div>
@@ -122,7 +122,7 @@
             </figure>
             <figure>
                 <div class="middle">
-                    <Button>
+                    <Button on:click={()=>createRoute('/bridge')}>
                         <Text type="small">Click Here to Learn More!</Text>
                     </Button>
                 </div>
@@ -153,7 +153,7 @@
             </figure>
             <figure>
                 <div class="middle">
-                    <Button>
+                    <Button on:click={()=>createRoute('/zoo-lights')}>
                         <Text type="small">Click Here to Learn More!</Text>
                     </Button>
                 </div>
@@ -166,7 +166,7 @@
             </figure>
             <figure>
                 <div class="middle">
-                    <Button>
+                    <Button on:click={()=>createRoute('/findlay-market')}>
                         <Text type="small">Click Here to Learn More!</Text>
                     </Button>
                 </div>
@@ -244,7 +244,7 @@
         flex-direction: column;
     }
     figure {
-        position: relative; /* Ensure children are positioned relative to figure */
+        position: relative;
     }
 
     figure:hover {
