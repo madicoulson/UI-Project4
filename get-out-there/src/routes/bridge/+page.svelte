@@ -3,6 +3,46 @@
     import Header from '$lib/components/Header.svelte';
     import Button from '$lib/components/Button.svelte';
     import bridge from '$lib/components/img/bridge.jpg'
+    import Checkbox from '$lib/components/Checkbox.svelte';
+    import Toast from '$lib/components/Toast.svelte';
+    import {notifications} from '$lib/notifications';
+
+    let currentAttending = $state(203);
+    let currentInterest = $state(108);
+    let isAttending = $state(false);
+    let isInterested = $state(false);
+
+    function handleAttendingChange() {
+        if (!isAttending) {
+            currentAttending = currentAttending + 1;
+            isAttending = true;
+            notifications.default('You are now marked as attending the event!', 2000);
+            if (isInterested) {
+                handleInterestedChange();
+            }
+        }
+        else {
+            currentAttending = currentAttending - 1;
+            isAttending = false;
+            notifications.default('You are unmarked from attending the event.', 2000);
+        }
+    }
+
+    function handleInterestedChange() {
+        if (!isInterested) {
+            currentInterest = currentInterest + 1;
+            isInterested = true;
+            notifications.default('You are now marked as interested in the event!', 2000);
+            if (isAttending) {
+                handleAttendingChange();
+            }
+        }
+        else {
+            currentInterest = currentInterest - 1;
+            isInterested = false;
+            notifications.default('You are unmarked from from interest in the event!', 2000);
+        }
+    }
 </script>
 
 <div class="background">
@@ -17,12 +57,13 @@
             <Text type="bold">Walk across Cincinnati's historic Roebling Bridge across the Ohio River. This bridge
                 connects downtown Cincinnati to Covington, Kentucky. It is open year round.
             </Text>
-            <div class="extra-padding"><Text>203 people are already attending, and 108 are interested!</Text></div>
-            <div class="row extra-padding">
-                <Button><Text>I'm Attending</Text></Button>
-                <Button><Text>I'm Interested</Text></Button>
-                <Button><Text>Help Me Find a Group</Text></Button>
-            </div>
+            <div class="extra-padding"><Text>{currentAttending} people are already attending, and {currentInterest} are interested!</Text></div>
+                <div class="row extra-padding">
+                    <Checkbox label="I'm Attending" on:change={handleAttendingChange} checked={isAttending} />
+                    <Checkbox label="I'm Interested" on:change={handleInterestedChange} checked={isInterested}/>
+                    <Button><Text>Help Me Find a Group</Text></Button>
+                </div>
+            <Toast />
         </div>
     </div>
 </div>
