@@ -19,6 +19,10 @@
     const handleSelect = (event) => {
         selectedEvent = event.detail;
     };
+
+    function createRoute(route) {  
+        window.location.href = route;
+    }
 </script>
 
 <div class="box">
@@ -30,6 +34,11 @@
     {#if selectedEvent === "Outdoor"}
         <div class="row">
             <figure>
+                <div class="middle">
+                    <Button>
+                        <Text type="small">Click Here to Learn More!</Text>
+                    </Button>
+                </div>
                 <img src={zoo} alt="Zoo Lights"/>
                 <figcaption>
                     <Text type="small-bold">Cincinnati Zoo Lights</Text>
@@ -38,6 +47,11 @@
                 </figcaption>
             </figure>
             <figure>
+                <div class="middle">
+                    <Button>
+                        <Text type="small">Click Here to Learn More!</Text>
+                    </Button>
+                </div>
                 <img src={winterfest} alt="WinterFest at Kings Island"/>
                 <figcaption>
                     <Text type="small-bold">WinterFest at Kings Island</Text>
@@ -46,6 +60,11 @@
                 </figcaption>
             </figure>
             <figure>
+                <div class="middle">
+                    <Button>
+                        <Text type="small">Click Here to Learn More!</Text>
+                    </Button>
+                </div>
                 <img src={bridge} alt="Roebling Bridge"/>
                 <figcaption>
                     <Text type="small-bold">Check Out the Roebling Bridge</Text>
@@ -59,6 +78,11 @@
     {#if selectedEvent === "High Attendance"}
         <div class="row">
             <figure>
+                <div class="middle">
+                    <Button on:click={()=>createRoute('/bengals')}>
+                        <Text type="small">Click Here to Learn More!</Text>
+                    </Button>
+                </div>
                 <img src={bengals} alt="Bengals"/>
                 <figcaption>
                     <Text type="small-bold">Bengals vs Browns Football Game</Text>
@@ -67,6 +91,11 @@
                 </figcaption>
             </figure>
             <figure>
+                <div class="middle">
+                    <Button>
+                        <Text type="small">Click Here to Learn More!</Text>
+                    </Button>
+                </div>
                 <img src={zoo} alt="Zoo Lights"/>
                 <figcaption>
                     <Text type="small-bold">Cincinnati Zoo Lights</Text>
@@ -75,6 +104,11 @@
                 </figcaption>
             </figure>
             <figure>
+                <div class="middle">
+                    <Button>
+                        <Text type="small">Click Here to Learn More!</Text>
+                    </Button>
+                </div>
                 <img src={findlay} alt="Findlay Market"/>
                 <figcaption>
                     <Text type="small-bold">Findlay Market in the Winter</Text>
@@ -89,6 +123,11 @@
     {#if selectedEvent === "All Events"}
         <div class="row">
             <figure>
+                <div class="middle">
+                    <Button>
+                        <Text type="small">Click Here to Learn More!</Text>
+                    </Button>
+                </div>
                 <img src={zoo} alt="Zoo Lights"/>
                 <figcaption>
                     <Text type="small-bold">Cincinnati Zoo Lights</Text>
@@ -97,6 +136,11 @@
                 </figcaption>
             </figure>
             <figure>
+                <div class="middle">
+                    <Button>
+                        <Text type="small">Click Here to Learn More!</Text>
+                    </Button>
+                </div>
                 <img src={winterfest} alt="WinterFest at Kings Island"/>
                 <figcaption>
                     <Text type="small-bold">WinterFest at Kings Island</Text>
@@ -105,6 +149,11 @@
                 </figcaption>
             </figure>
             <figure>
+                <div class="middle">
+                    <Button>
+                        <Text type="small">Click Here to Learn More!</Text>
+                    </Button>
+                </div>
                 <img src={findlay} alt="Findlay Market"/>
                 <figcaption>
                     <Text type="small-bold">Findlay Market in the Winter</Text>
@@ -115,6 +164,11 @@
         </div>
         <div class="row">
             <figure>
+                <div class="middle">
+                    <Button>
+                        <Text type="small">Click Here to Learn More!</Text>
+                    </Button>
+                </div>
                 <img src={cyclones} alt="Cincinnati Cyclones"/>
                 <figcaption>
                     <Text type="small-bold">Cincinnati Cyclones Hockey Game</Text>
@@ -123,6 +177,11 @@
                 </figcaption>
             </figure>
             <figure>
+                <div class="middle">
+                    <Button>
+                        <Text type="small">Click Here to Learn More!</Text>
+                    </Button>
+                </div>
                 <img src={bridge} alt="Roebling Bridge"/>
                 <figcaption>
                     <Text type="small-bold">Walk the Roebling Bridge</Text>
@@ -131,6 +190,11 @@
                 </figcaption>
             </figure>
             <figure>
+                <div class="middle">
+                    <Button>
+                        <Text type="small">Click Here to Learn More!</Text>
+                    </Button>
+                </div>
                 <img src={bengals} alt="Bengals"/>
                 <figcaption>
                     <Text type="small-bold">Bengals vs Browns Football Game</Text>
@@ -179,5 +243,19 @@
         transform: scale(1.05);
         filter: brightness(1.2);
         cursor: pointer;
+        opacity: 0.7;
+    }
+    .middle {
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    figure:hover .middle {
+        opacity: 1;
     }
 </style>
