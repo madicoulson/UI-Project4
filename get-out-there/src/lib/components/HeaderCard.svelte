@@ -11,9 +11,9 @@
             Get Out There!<br />
             <span class="italic">Cincinnati</span>
         </Header>         
-        <Text>Events</Text>
-        <Text>Connect</Text>
-        <Text>Explore</Text>
+        <Text type="selected-text">Events</Text>
+        <Text type="hover-text">Connect</Text>
+        <Text type="hover-text">Explore</Text>
         <Button shape="round">
             <img src={profile} alt="Profile SVG"/>
         </Button>

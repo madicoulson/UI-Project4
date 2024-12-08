@@ -1,11 +1,14 @@
 <script>
     import Text from "./Text.svelte";
+    import { createEventDispatcher } from 'svelte';
+
 
     export let options = [];
     export let placeholder = "Filters";
   
     let isOpen = false; 
     let selectedOption = null;
+    const dispatch = createEventDispatcher(); 
   
     const toggleDropdown = () => {
       isOpen = !isOpen;
@@ -14,6 +17,7 @@
     const selectOption = (option) => {
       selectedOption = option;
       isOpen = false;
+      dispatch('select', selectedOption);
     };
 </script>
 

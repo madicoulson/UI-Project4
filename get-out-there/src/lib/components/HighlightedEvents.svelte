@@ -30,8 +30,8 @@
             <img src={cyclones} alt="Cincinnati Cyclones"/>
             <figcaption>
                 <Text type="small-bold">Cincinnati Cyclones Hockey Game</Text>
-                <Text type="small">November 1, 2024 - February 28, 2025</Text>
-                <Text type="small">789 people attending, 590 interested</Text>
+                <Text type="small">October 19, 2024 - April 12, 2025</Text>
+                <Text type="small">609 people attending, 340 interested</Text>
             </figcaption>
         </figure>   
     </div>
