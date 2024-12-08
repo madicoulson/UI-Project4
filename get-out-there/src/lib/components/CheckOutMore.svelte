@@ -88,7 +88,7 @@
 
 <div class="box">
     <div class="first-row">
-        <Header type="subheader">Check Out More Events</Header>
+        <Header type="subheader">More Events</Header>
         <Dropdown options={items} on:select={handleSelect}></Dropdown>
     </div>
     
@@ -216,7 +216,6 @@
         padding: 20px;
         display:flex;
         flex-direction: column;
-        height: 100vh;
     }
     .first-row {
         display: flex;

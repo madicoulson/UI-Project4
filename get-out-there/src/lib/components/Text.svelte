@@ -18,7 +18,7 @@
 	.text {
 		color: black;
 		font-size: 24px;
-		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		font-family: 'inter', sans-serif;
 	}
 
     .bold {

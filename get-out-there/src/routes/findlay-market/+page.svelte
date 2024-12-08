@@ -45,7 +45,6 @@
         background-color: #FAF9F6;
     }
     .info {
-        background-color: #FAF9F6;
         padding-left: 20px;
         padding-right: 20px;
         padding-top: 60px;
@@ -72,5 +71,7 @@
     img {
         width: 800px;
         height: 500px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     }
 </style>

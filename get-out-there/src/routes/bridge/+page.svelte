@@ -71,5 +71,7 @@
     img {
         width: 800px;
         height: 500px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     }
 </style>

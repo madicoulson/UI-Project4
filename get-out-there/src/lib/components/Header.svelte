@@ -16,7 +16,7 @@
 		margin: 0;
 		color: black;
 		font-weight: bold;
-        font-family: Tahoma;
+        font-family: 'inter', sans-serif;
 	}
 
 	.h1 {
