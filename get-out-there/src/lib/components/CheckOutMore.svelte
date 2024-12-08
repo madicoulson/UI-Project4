@@ -10,9 +10,6 @@
     import Dropdown from './Dropdown.svelte';
     import bengals from '$lib/components/img/bengals.jpg'
 
-    import Test from '$lib/test.svelte';
-    
-
     const items = ["Outdoor", "High Attendance", "All Events"];
     let currentSlide = 0;
 

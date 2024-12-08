@@ -5,12 +5,41 @@
     import zoo from '$lib/components/img/zoo_lights.jpg'
     import findlay from '$lib/components/img/findlay_market.jpeg';
     import cyclones from '$lib/components/img/cyclones.jpg'
+
+    let isRectangleDisplayed = false;
+    
+    function toggleZooLightInfo(){
+        if (isRectangleDisplayed){
+            isRectangleDisplayed = false;
+        }
+        else {
+            isRectangleDisplayed = true;
+        }
+    }
+
+    function toggleFindlayMarketInfo(){
+        if (isRectangleDisplayed){
+            isRectangleDisplayed = false;
+        }
+        else {
+            isRectangleDisplayed = true;
+        }
+    }
+
+    function toggleCyclonesInfo(){
+        if (isRectangleDisplayed){
+            isRectangleDisplayed = false;
+        }
+        else {
+            isRectangleDisplayed = true;
+        }
+    }
 </script>
 
 <div class="box">
     <Header type="subheader">Highlighted Events</Header>
     <div class="row">
-        <figure>
+        <figure on:mouseenter={toggleZooLightInfo} on:mouseleave={toggleZooLightInfo}>
             <div class="middle">
                 <Button>
                     <Text type="small">Click Here to Learn More!</Text>
@@ -23,7 +52,7 @@
                 <Text type="small">804 people attending, 367 interested</Text>
             </figcaption>
         </figure>
-        <figure>
+        <figure on:mouseenter={toggleFindlayMarketInfo} on:mouseleave={toggleFindlayMarketInfo}>
             <div class="middle">
                 <Button>
                     <Text type="small">Click Here to Learn More!</Text>
@@ -36,7 +65,7 @@
                 <Text type="small">789 people attending, 590 interested</Text>
             </figcaption>
         </figure>
-        <figure>
+        <figure on:mouseenter={toggleCyclonesInfo} on:mouseleave={toggleCyclonesInfo}>
             <div class="middle">
                 <Button>
                     <Text type="small">Click Here to Learn More!</Text>
@@ -48,7 +77,7 @@
                 <Text type="small">October 19, 2024 - April 12, 2025</Text>
                 <Text type="small">609 people attending, 340 interested</Text>
             </figcaption>
-        </figure>   
+        </figure>  
     </div>
 </div>
 
@@ -63,12 +92,14 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        justify-content: space-between;
     }
     img {
         width: 450px;
         height: 300px;
         padding-top: 20px;
+    }
+    figure {
+        border-radius: 10px;
     }
     figcaption {
         background-color: #A98E92;

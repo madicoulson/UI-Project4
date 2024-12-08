@@ -4,7 +4,6 @@
     import ImageBox from "$lib/components/ImageBox.svelte";
     import profile from '$lib/components/img/profile.svg';
     import CheckOutMore from "$lib/components/CheckOutMore.svelte";
-    import Test from "$lib/test.svelte";
 </script>
 
 <div class="component">
