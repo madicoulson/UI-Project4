@@ -22,42 +22,48 @@
             alt: "Zoo Lights",
             title: "Cincinnati Zoo Lights",
             dates: "November 24, 2024 - January 5, 2025",
-            stats: "804 people attending, 367 interested"
+            stats: "804 people attending, 367 interested",
+            route: "/zoo-lights"
         },
         {
             img: winterfest,
             alt: "WinterFest at Kings Island",
             title: "WinterFest at Kings Island",
             dates: "November 29 - December 31",
-            stats: "508 people attending, 453 interested"
+            stats: "508 people attending, 453 interested",
+            route: "/winterfest"
         },
         {
             img: findlay,
             alt: "Findlay Market",
             title: "Findlay Market in the Winter",
             dates: "November 1, 2024 - February 28, 2025",
-            stats: "789 people attending, 590 interested"
+            stats: "789 people attending, 590 interested",
+            route: "/findlay-market"
         },
         {
             img: cyclones,
             alt: "Cincinnati Cyclones",
             title: "Cincinnati Cyclones Hockey Game",
             dates: "October 19, 2024 - April 12, 2025",
-            stats: "609 people attending, 340 interested"
+            stats: "609 people attending, 340 interested",
+            route: "/cyclones"
         },
         {
             img: bridge,
             alt: "Roebling Bridge",
             title: "Walk the Roebling Bridge",
             dates: "All Year",
-            stats: "203 people attending, 108 interested"
+            stats: "203 people attending, 108 interested",
+            route: "/bridge"
         },
         {
             img: bengals,
             alt: "Bengals",
             title: "Bengals vs Browns Football Game",
             dates: "December 22 at 1 PM",
-            stats: "854 people attending, 245 interested"
+            stats: "854 people attending, 245 interested",
+            route: "/bengals"
         }
     ];
 
@@ -187,7 +193,7 @@
                     {#each events.slice(slideIndex * 3, slideIndex * 3 + 3) as event}
                         <figure>
                             <div class="middle">
-                                <Button>
+                                <Button on:click={()=>createRoute(event.route)}>
                                     <Text type="small">Click Here to Learn More!</Text>
                                 </Button>
                             </div>
