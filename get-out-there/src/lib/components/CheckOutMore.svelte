@@ -74,7 +74,7 @@
         currentSlide = (currentSlide - 1 + numSlides) % numSlides;
     }
 
-    let selectedEvent = null;
+    let selectedEvent = "All Events";
 
 
     const handleSelect = (event) => {
@@ -96,7 +96,7 @@
         <div class="row">
             <figure>
                 <div class="middle">
-                    <Button>
+                    <Button  on:click={()=>createRoute('/zoo-lights')}>
                         <Text type="small">Click Here to Learn More!</Text>
                     </Button>
                 </div>
@@ -109,7 +109,7 @@
             </figure>
             <figure>
                 <div class="middle">
-                    <Button>
+                    <Button  on:click={()=>createRoute('/winterfest')}>
                         <Text type="small">Click Here to Learn More!</Text>
                     </Button>
                 </div>
@@ -243,25 +243,50 @@
         display:flex;
         flex-direction: column;
     }
+    figure {
+        position: relative; /* Ensure children are positioned relative to figure */
+    }
+
     figure:hover {
         transform: scale(1.05);
         filter: brightness(1.2);
         cursor: pointer;
-        opacity: 0.7;
+        z-index: 1;
+        position: relative
     }
+
+    figure::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background: rgba(250, 249, 245, 0.7);
+        transition: opacity 0.3s ease;
+        z-index: 1;
+    }
+
+    figure:hover::after {
+        opacity: 1; 
+    }
+
     .middle {
         opacity: 0;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
         text-align: center;
+        z-index: 2;
+        transition: opacity 0.3s ease;
     }
 
     figure:hover .middle {
         opacity: 1;
     }
+
 
     .carousel {
         position: relative;
