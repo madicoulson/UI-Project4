@@ -14,6 +14,7 @@
         <Text type="selected-text">Events</Text>
         <Text type="hover-text">Connect</Text>
         <Text type="hover-text">Explore</Text>
+        <Text type="hover-text">Groups</Text>
         <Button shape="round">
             <img src={profile} alt="Profile SVG"/>
         </Button>
@@ -24,6 +25,8 @@
     .box{
         background-color: #A98E92;
         padding: 20px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
     }
     .first-row {
         display: flex;
